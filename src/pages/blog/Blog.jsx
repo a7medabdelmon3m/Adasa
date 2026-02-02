@@ -260,7 +260,7 @@ function handlePage(pageIdx){
               {idx+1}
             </div>
               )}
-            <div onClick={incPages} className={`${currentBtnPage === totalPages ? 'pe-none text-secondary border-secondary' :'text-white border-white'} logo d-flex align-items-center text-white justify-content-center bg-second border rounded-2`}>
+            <div onClick={incPages} className={`${currentBtnPage === totalPages ? 'pe-none text-secondary border-secondary' :'text-white border-white'} logo d-flex align-items-center  justify-content-center bg-second border rounded-2`}>
               <i className="fa-solid fa-angle-left"></i>
             </div>
           </div>
