@@ -73,6 +73,12 @@ function handlePage(pageIdx){
   
 
 }
+ function incPages(){
+  setCurrentBtnPage(currentBtnPage+1) ;
+ }
+ function decPages(){
+  setCurrentBtnPage(currentBtnPage-1) ;
+ }
 
 // function handleSerach(e){
 //   let word =  e.target.value
@@ -244,8 +250,8 @@ function handlePage(pageIdx){
               </Link>
             ))}
           </div>
-          <div className={`${totalPages === 1 ? 'd-none':''} d-flex justify-content-center gap-2 align-items-center mb-5 text-secondary`}>
-            <div className="logo d-flex align-items-center justify-content-center bg-second border rounded-2">
+          <div className={`${totalPages === 1 || totalPages === 0  ? 'd-none':''} d-flex justify-content-center gap-2 align-items-center mb-5 text-white`}>
+            <div onClick={decPages} className={`${currentBtnPage === 1 ? 'pe-none text-secondary border-secondary' :'text-white border-white'} logo d-flex align-items-center justify-content-center bg-second border rounded-2`}>
               <i className="fa-solid fa-angle-right"></i>
             </div>
               {
@@ -254,11 +260,11 @@ function handlePage(pageIdx){
               {idx+1}
             </div>
               )}
-            <div className="logo d-flex align-items-center text-white justify-content-center bg-second border rounded-2">
+            <div onClick={incPages} className={`${currentBtnPage === totalPages ? 'pe-none text-secondary border-secondary' :'text-white border-white'} logo d-flex align-items-center text-white justify-content-center bg-second border rounded-2`}>
               <i className="fa-solid fa-angle-left"></i>
             </div>
           </div>
-          <p className={` ${totalPages === 1 ? 'd-none':''} text-secondary text-center`}>
+          <p className={` ${totalPages === 1 || totalPages === 0  ? 'd-none':''} text-secondary text-center`}>
             صفحة <span className="text-main fw-bold">{currentBtnPage}</span> من <span className="text-main fw-bold">{totalPages}</span>
           </p>
         </div>
