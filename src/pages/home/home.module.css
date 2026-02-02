@@ -1,0 +1,10 @@
+.margin20{
+    margin: 0 10%;
+    padding: 80px 32px;
+}
+@media  (max-width :768px ){
+    .margin20{
+        margin: 0 5%;
+       padding: 80px 16px;
+    }
+}
